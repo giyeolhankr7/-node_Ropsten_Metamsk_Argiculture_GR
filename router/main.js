@@ -9,6 +9,6 @@ module.exports = function(app)
     });
 	
     app.get('/intro',function(req,res){
-        res.render('about.html');
+        res.render('intro.html');
     });
 }
