@@ -2,154 +2,154 @@ const { web3 } = window
 const selectedAddress = web3.eth.defaultAccount
 
 $(document).ready(function() {
-    const productRegistryContractAddress = '0x6c5258D61669AeE1f29b2dA2f3EBF1466bAbe16a';
+    const productRegistryContractAddress = '0xb8a47b9cE8Db2C063d35902BBa4bB4964e202aeB';
     const productRegistryContractABI = [
-			{
-				"constant": true,
-				"inputs": [
-					{
-						"name": "_index",
-						"type": "uint256"
-					}
-				],
-				"name": "getProductStruct",
-				"outputs": [
-					{
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"name": "",
-						"type": "string"
-					},
-					{
-						"name": "",
-						"type": "string"
-					},
-					{
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "killContract",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [
-					{
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "productes",
-				"outputs": [
-					{
-						"name": "number",
-						"type": "uint256"
-					},
-					{
-						"name": "productName",
-						"type": "string"
-					},
-					{
-						"name": "location",
-						"type": "string"
-					},
-					{
-						"name": "timestamp",
-						"type": "uint256"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
-						"name": "_initNumber",
-						"type": "uint256"
-					},
-					{
-						"name": "_firstString",
-						"type": "string"
-					},
-					{
-						"name": "_secondString",
-						"type": "string"
-					}
-				],
-				"name": "addProStru",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "getNumOfProducts",
-				"outputs": [
-					{
-						"name": "",
-						"type": "uint8"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "getAllproducts",
-				"outputs": [
-					{
-						"components": [
-							{
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"name": "productName",
-								"type": "string"
-							},
-							{
-								"name": "location",
-								"type": "string"
-							},
-							{
-								"name": "timestamp",
-								"type": "uint256"
-							}
-						],
-						"name": "",
-						"type": "tuple[]"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			}
-		]
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_index",
+					"type": "uint256"
+				}
+			],
+			"name": "getProductStruct",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"name": "",
+					"type": "string"
+				},
+				{
+					"name": "",
+					"type": "string"
+				},
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [],
+			"name": "killContract",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "productes",
+			"outputs": [
+				{
+					"name": "number",
+					"type": "uint256"
+				},
+				{
+					"name": "productName",
+					"type": "string"
+				},
+				{
+					"name": "location",
+					"type": "string"
+				},
+				{
+					"name": "timestamp",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "_initNumber",
+					"type": "uint256"
+				},
+				{
+					"name": "_firstString",
+					"type": "string"
+				},
+				{
+					"name": "_secondString",
+					"type": "string"
+				}
+			],
+			"name": "addProStru",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "getNumOfProducts",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint8"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "getAllproducts",
+			"outputs": [
+				{
+					"components": [
+						{
+							"name": "number",
+							"type": "uint256"
+						},
+						{
+							"name": "productName",
+							"type": "string"
+						},
+						{
+							"name": "location",
+							"type": "string"
+						},
+						{
+							"name": "timestamp",
+							"type": "uint256"
+						}
+					],
+					"name": "",
+					"type": "tuple[]"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		}
+	]
 
 
     $('#linkHome').click(function() { showView("viewHome") });
